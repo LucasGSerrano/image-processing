@@ -44,9 +44,11 @@ img_make = zeros(256,256);
 % subplot(2,2,1), imagesc(min(min(img_make)),max(max(img_make)),img_make),title('Made Image Original');
 % colormap(gray);
 
-img_make(118:138,118:138) = 1.0;
+img_make(119:139,119:139) = 1.0;
 subplot(2,2,1), imagesc(min(min(img_make)),max(max(img_make)),img_make),title('Made Image'), axis('square');
 colormap(gray);
+
+img_make = fftshift(img_make);
 
 img_quad = imread('quad.bmp');
 img_fourrier_quad = fft2(img_quad);
